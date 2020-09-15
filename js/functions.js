@@ -76,6 +76,7 @@ var liSelectedC;
 /* INPUTS TEXT DIVISAS */
 var inputText = document.getElementById("myInput");
 var inputTextC = document.getElementById("inputConverter");
+var toValue = document.getElementById('quantityConverter');
 
 const myFunctions = {
   arrowPress: function(e){
@@ -189,14 +190,14 @@ const myFunctions = {
     }
   },
   converter: function(fromCurrency, toCurrency, currencies){
-
+    //console.log(fromCurrency+' '+toCurrency+' '+currencies);
+    
     fetch(`https://free.currconv.com/api/v7/convert?apiKey=d4cf3228112bfb5a29f5&q=${fromCurrency}_${toCurrency}&compact=y`)
         .then((response)=>response.json())
         .then((rate)=> {
-          console.log(rate);
-          //toValue.value = (currencies * rate[`${fromCurrency}_${toCurrency}`].val).toFixed(2)
+          //console.log(rate);
+          toValue.value = (currencies * rate[`${fromCurrency}_${toCurrency}`].val).toFixed(2)
         }).catch((e)=>console.log(e))
-  
   }
 
 }
@@ -350,7 +351,7 @@ buttonConverter.addEventListener('click', function(){
     inputTextC.focus();
   }else {
     //console.log('Ahora si biene lo chido');
-    //myFunctions.converter(fromCurrency, toCurrency, currencies)
+    myFunctions.converter(currencyBase, currencyTo, q);
   }
 
 });
