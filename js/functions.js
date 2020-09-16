@@ -1,3 +1,5 @@
+
+const crossCoins = document.getElementById("crossCoins");
 /*- VALIDATE INPUT QUANTITY ONLY NUMBERS -*/
 var RegExp = new RegExp(/^\d*\.?\d*$/); 
 const quantity = document.getElementById("quantity");
@@ -352,6 +354,21 @@ buttonConverter.addEventListener('click', function(){
   }else {
     //console.log('Ahora si biene lo chido');
     myFunctions.converter(currencyBase, currencyTo, q);
+    crossCoins.classList.remove('hidde');
+    crossCoins.classList.add('show');
   }
+
+});
+
+crossCoins.addEventListener('click', function(){
+  var currencyBaseC = inputText.dataset.currency;
+  var currencyToC = inputTextC.dataset.currency;
+  var currencyBaseValue = inputText.value;
+  var currencyToValue = inputTextC.value;
+  inputText.dataset.currency = currencyToC;
+  inputTextC.dataset.currency = currencyBaseC;
+  inputText.value = currencyToValue;
+  inputTextC.value = currencyBaseValue;
+  buttonConverter.click();
 
 });

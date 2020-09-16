@@ -6,20 +6,26 @@
   <!-- MATERIAL ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 <body>
+  <head>  
+    <div class="container">
+      <div class="row">
+        <div class="col m12">
+          <h3 class="fasterOne"><img src="https://www.hackspace.pe/assets/img/abeja.png" width="50">   Convertidor de moneda</h3>
+        </div>
+      </div>
+    </div>
+  </head>
   <div class="container">
       <div class="section">
         <!--   Icon Section   -->
         <div class="row">
-            <div class="col m12">
-              <h3 class="fasterOne"><img src="https://www.hackspace.pe/assets/img/abeja.png" width="50">   Convertidor de moneda</h3>
-            </div>
           <div class="col s12">
             <div class="row m-0">
               <div class="input-field col m6">
@@ -29,13 +35,16 @@
                 <ul id="allItems" style="display: none"></ul>
               </div>
               <div class="input-field col m6">
+                <i class="material-icons prefix">attach_money</i>
                 <input type="text" id="quantity" data-message="Cantidad de divisas">
                 <label for="quantity">Cantidad de divisas</label>
               </div>
             </div>
           </div>
           <div class="col m12 text-center">
-              <h4 class="m-0">CAMBIAR POR</h4>
+              <h5 class="">Cambiar por
+                <a id="crossCoins" class="hidde waves-effect waves-light btn-small"><span class="material-icons">swap_vert</span></a>
+              </h5>
             </div>
             <div class="col s12">
             <div class="row m-0">
@@ -46,13 +55,14 @@
                 <ul id="allItemsC" style="display: none"></ul>
               </div>
               <div class="input-field col m6">
+                <i class="material-icons prefix">attach_money</i>
                 <input type="text" id="quantityConverter" readonly="" placeholder="Cantidad de divisas">
                 <!--<label for="quantityConverter">Cantidad de divisas</label>-->
               </div>
             </div>
           </div>
-          <div class="row center">
-            <a id="converter" class="waves-effect waves-light fasterOne btn-large convert-button"><i class="material-icons right">monetization_on</i>Convertir</a>
+          <div class="row center mt-5">
+            <a id="converter" class="waves-effect waves-light fasterOne btn-large convert-button mt-5"><i class="material-icons right">monetization_on</i>Convertir</a>
           </div>
       </div>
       </div>

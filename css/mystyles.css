@@ -1,63 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
 .fasterOne { 
   font-family: 'Faster One', cursive; 
   text-shadow: 2px 2px #fbbd00, -2px -2px #fbbd00, 2px -2px #fbbd00, -2px 2px #fbbd00;
 }
-
+.kumbhSans { font-family: 'Kumbh Sans', sans-serif; }
 .convert-button { color: black; background: #000 !important; font-size: 18px; }
 
 .convert-button:hover { text-shadow: -2px -2px #fbbd00, 2px 2px #fbbd00, -2px 2px #fbbd00, 2px -2px #fbbd00; }
 
+input, body {
+  font-family: 'Kumbh Sans', sans-serif; font-weight: 700;
+}
+
 .dropdown-content {
-      position: absolute;
-      background-color: #f6f6f6;
-      min-width: 230px;
-      overflow: auto;
-      border: 1px solid #ddd;
-      z-index: 1;
-    }
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
 
-    #allItems li {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      background: rgb(240, 240, 240);
-      border-bottom: 1px solid #9e9e9e;
-    }
+#allItems li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: rgb(240, 240, 240);
+  border-bottom: 1px solid #9e9e9e;
+}
 
-    #allItems li:hover {background-color: #ddd;}
+#allItems li:hover {background-color: #ddd;}
 
-    #allItems { padding-left: 0px; margin-top: -9px; padding-left: 45px; }
+#allItems { padding-left: 0px; margin-top: -9px; padding-left: 45px; }
 
-    .show {display: block;}
+.hidde { display: none; }
+.show {display: inline-block;}
 
-    #allItems { display: none; }
+#allItems { display: none; }
 
-    #allItems li.background{ background: hsla(0, 100%, 0%, 0.4); color: white; }
-    .text-center { text-align: center; }
-    .m-0 { margin: 0px; }
+#allItems li.background{ background: hsla(0, 100%, 0%, 0.4); color: white; }
+.text-center { text-align: center; }
+.m-0 { margin: 0px; }
 
 
-    #allItemsC li {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      background: rgb(240, 240, 240);
-      border-bottom: 1px solid #9e9e9e;
-    }
+#allItemsC li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: rgb(240, 240, 240);
+  border-bottom: 1px solid #9e9e9e;
+}
 
-    #allItemsC li:hover {background-color: #ddd;}
+#allItemsC li:hover {background-color: #ddd;}
 
-    #allItemsC { padding-left: 0px; margin-top: -9px; padding-left: 45px; }
+#allItemsC { padding-left: 0px; margin-top: -9px; padding-left: 45px; }
 
-    #allItemsC { display: none; }
+#allItemsC { display: none; }
 
-    #allItemsC li.background{ background: hsla(0, 100%, 0%, 0.4); color: white; }
-    .text-center { text-align: center; }
-    .m-0 { margin: 0px; }
+#allItemsC li.background{ background: hsla(0, 100%, 0%, 0.4); color: white; }
+.text-center { text-align: center; }
+.m-0 { margin: 0px; }
+
+.mt-5 { margin-top: 30px; }
+
+#crossCoins { margin-top: -10px; margin-left: 15px; }
+#crossCoins span { font-size: 30px; }
+
+.btn:hover, .btn-large:hover, .btn-small:hover { background: black; }
+
     @media only screen and (min-width: 993px){
       #toast-container { right: 39%; }
     }
